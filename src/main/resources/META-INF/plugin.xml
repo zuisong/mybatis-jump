@@ -11,15 +11,15 @@
     <depends>com.intellij.modules.java</depends>
 
     <!-- 兼容版本 -->
-    <idea-version since-build="191.00"/>
+    <idea-version since-build="231"/>
 
     <extensions defaultExtensionNs="com.intellij">
-        <dom.fileDescription implementation="com.liuzhihang.toolkit.description.MapperDescription"/>
+        <dom.fileMetaData implementation="com.liuzhihang.toolkit.description.MapperDescription"/>
         <codeInsight.lineMarkerProvider language="JAVA"
                                         implementationClass="com.liuzhihang.toolkit.provider.Java2MapperLineMarkerProvider"/>
         <codeInsight.lineMarkerProvider language="XML"
                                         implementationClass="com.liuzhihang.toolkit.provider.Mapper2JavaLineMarkerProvider"/>
-        <definitionsSearch implementation="com.liuzhihang.toolkit.search.MapperDefinitionSearch"/>
+        <definitionsScopedSearch implementation="com.liuzhihang.toolkit.search.MapperDefinitionSearch"/>
 
         <localInspection language="XML" shortName="ToolkitMapperXmlInspection" enabledByDefault="true" level="ERROR"
                          displayName="Mapper xml inspection" groupName="Mybatis"
